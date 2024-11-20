@@ -1,0 +1,14 @@
+.header {
+    &_avatar__drop {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #F4F4F5;
+        padding: 12px 10px;
+        div:first-child {
+            margin-right: 10px;
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+}

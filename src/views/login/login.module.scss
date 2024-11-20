@@ -1,0 +1,122 @@
+.login {
+  height: 100vh;
+  width: 100%;
+  background-color: #e4e4e7;
+  display: flex;
+  &-left {
+    width: 66%;
+    height: 100%;
+    background: url("@/assets/images/login-bg.png") no-repeat center;
+    background-size: cover;
+    img {
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+  }
+  &-right {
+    position: relative;
+    width: 34%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-title {
+      margin-bottom: 35px;
+      font-weight: bold;
+      color: #000;
+      width: 60%;
+
+      h1 {
+        margin: 0;
+        font-size: 28px;
+      }
+      div {
+        font-size: 16px;
+
+        span {
+          color: var(--ant-color-primary);
+        }
+      }
+    }
+
+    .login-form {
+      width: 60%;
+      // input,
+      &-input {
+        height: 40px;
+      }
+      // button {
+      //   height: 30px;
+      // }
+      // input[type="password"] {
+      //   height: 30px;
+      // }
+    }
+
+    .copyright {
+      width: 100%;
+      font-size: 12px;
+      line-height: 20px;
+      position: absolute;
+      bottom: 30px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.45);
+      white-space: pre-wrap;
+      pointer-events: none;
+    }
+  }
+
+  .slider-check {
+    --slider-check-bg-color: #f4f4f5;
+    --slider-check-progress: 0px;
+    --slider-check-success-color: var(--ant-color-success);
+    --slider-check-trigger-border-color: var(--slider-check-bg-color);
+    --slider-check-trigger-color: var(--ant-color-text-placeholder);
+    position: relative;
+    background-color: var(--slider-check-bg-color);
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+
+    &__progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: var(--slider-check-progress);
+      background-color: var(--slider-check-success-color);
+      height: 100%;
+    }
+
+    &__text {
+      position: relative;
+      z-index: 2;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    &__trigger {
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: var(--slider-check-progress);
+      width: 40px;
+      height: 40px;
+      background-color: #fafafa;
+      border: 1px solid var(--slider-check-trigger-border-color);
+      font-size: 20px;
+      line-height: 36px;
+      color: var(--slider-check-trigger-color);
+      cursor: move;
+    }
+
+    &.is-checked {
+      --slider-check-trigger-border-color: var(--slider-check-success-color);
+      --slider-check-trigger-color: var(--slider-check-success-color);
+
+      color: #fff;
+    }
+  }
+}
